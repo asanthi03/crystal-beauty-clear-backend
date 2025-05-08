@@ -84,6 +84,7 @@ export function loginUser(req,res){
                 res.json({
                     message : "Incorrect password"
                 })
+                res.status = 402;
             }
         }
     })

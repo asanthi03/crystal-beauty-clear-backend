@@ -51,19 +51,19 @@ export function getProducts(req,res){
 
 
 export function deleteProduct(req,res){
-    if(req.user == null){
-        res.status(403).json({
-            message : "You need to login first"
-        })
-        return;
-    }
+    // if(req.user == null){
+    //     res.status(403).json({
+    //         message : "You need to login first"
+    //     })
+    //     return;
+    // }
 
-    if(req.user.role != "admin"){
-        res.status(403).json({
-            message : "Unauthorized to delete product"
-        })
-        return;
-    }
+    // if(req.user.role != "admin"){
+    //     res.status(403).json({
+    //         message : "Unauthorized to delete product"
+    //     })
+    //     return;
+    // }
 
     Product.findOneAndDelete({
         productId : req.params.productId
